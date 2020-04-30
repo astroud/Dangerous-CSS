@@ -1,13 +1,17 @@
 <head>
   {% if page.title %}
     <title>{{ page.title }} | Test Page</title>
+    <meta property="og:title" content="{{ page.title }} | Test Page" />
   {% else %}
     <title>Test Page: Don't Panic</title>
+    <meta property="og:title" content="Test Page: Don't Panic" />
   {% endif %}
   {% if page.description %}
     <meta name="description" content="{{ page.description }}">
+    <meta content='{{ page.description }}' property='og:description'>
   {% else %}
     <meta name="description" content="This is a dangerous site.">
+    <meta content='This is a dangerous site.' property='og:description'>
   {% endif %}
   <link href="/favicon.png" rel="icon">
   <meta charset="utf-8">
@@ -16,4 +20,8 @@
         href="/fonts/fontawesome-free-5.13.0-web/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  
+  <meta property="og:type" content="article" />
+  <meta content='https://softcover.s3.amazonaws.com/636/learn_enough_css/images/cover-web.png' property='og:image'>
+
 </head>
