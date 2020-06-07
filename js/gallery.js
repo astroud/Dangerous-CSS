@@ -11,6 +11,7 @@ function activateGallery() {
     let newImageSrc   = thumbnail.dataset.largeVersion;
     let largeVersion  = new Image();
     largeVersion.src  = newImageSrc;
+    let currentClass  = "current";
 
     thumbnail.addEventListener("click", function() {
       // Set clicked image as main image.
@@ -18,8 +19,8 @@ function activateGallery() {
       mainImage.setAttribute("alt", thumbnail.alt);
 
       // Change which image is current.
-      document.querySelector(".current").classList.remove("current");
-      thumbnail.parentNode.classList.add("current");
+      document.querySelector(`.${currentClass}`).classList.remove(currentClass);
+      thumbnail.parentNode.classList.add(currentClass);
 
       // Update image info.
       let galleryInfo = document.querySelector("#gallery-info");
